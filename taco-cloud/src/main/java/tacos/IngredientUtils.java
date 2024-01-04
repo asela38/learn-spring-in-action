@@ -1,5 +1,7 @@
 package tacos;
 
+import tacos.model.Ingredient;
+
 import java.util.Arrays;
 import java.util.List;
 

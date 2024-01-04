@@ -1,7 +1,8 @@
-package tacos;
+package tacos.model;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import tacos.model.Taco;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -15,6 +16,8 @@ import java.util.List;
 public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    private Long id;
 
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;

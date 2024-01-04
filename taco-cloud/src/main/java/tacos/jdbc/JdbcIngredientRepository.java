@@ -1,17 +1,17 @@
-package tacos;
+package tacos.jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
+import tacos.model.Ingredient;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class JdbcIngredientRepository implements IngredientRepository{
+public class JdbcIngredientRepository implements IngredientRepository {
 
     private final JdbcTemplate jdbcTemplate;
 

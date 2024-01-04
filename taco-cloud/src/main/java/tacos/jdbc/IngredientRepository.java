@@ -1,4 +1,6 @@
-package tacos;
+package tacos.jdbc;
+
+import tacos.model.Ingredient;
 
 import java.util.Optional;
 
