@@ -10,11 +10,15 @@ import java.util.stream.Collectors;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
-    private final Map<String, Ingredient> ingredientMap = IngredientUtils.getIngredients().stream()
-                                                            .collect(Collectors.toMap(i -> i.getId(), Function.identity(), (i,j) -> j, HashMap::new));
+
+    private final IngredientRepository ingredientRepository;
+
+    public IngredientByIdConverter(IngredientRepository ingredientRepository) {
+        this.ingredientRepository = ingredientRepository;
+    }
 
     @Override
     public Ingredient convert(String id) {
-        return ingredientMap.get(id);
+        return ingredientRepository.findById(id).orElse(null);
     }
 }
