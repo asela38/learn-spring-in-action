@@ -1,7 +1,12 @@
 package tacos.model;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 import tacos.model.Taco;
 
 import javax.validation.constraints.Digits;
@@ -17,6 +22,7 @@ public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
     private Long id;
 
     @NotBlank(message = "Delivery name is required")
@@ -35,7 +41,7 @@ public class TacoOrder implements Serializable {
     private String ccExpiration;
     @Digits(integer = 3,  fraction = 0, message = "Invalid CVV")
     private String ccCVV;
-    private Date placedAt;
+    private Date placedAt = new Date();
 
     private List<Taco> tacos = new ArrayList<>();
 

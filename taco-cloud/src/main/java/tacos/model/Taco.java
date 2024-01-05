@@ -1,6 +1,8 @@
 package tacos.model;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 import tacos.model.Ingredient;
 
 import javax.validation.constraints.NotNull;
@@ -9,8 +11,10 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Table
 public class Taco {
 
+    @Id
     private Long id;
 
     @NotNull
