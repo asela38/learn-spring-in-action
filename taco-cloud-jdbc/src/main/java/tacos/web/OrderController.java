@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-import tacos.data.jdbc.OrderDataRepository;
+import tacos.jdbc.OrderRepository;
 import tacos.model.TacoOrder;
 
 import javax.validation.Valid;
@@ -20,10 +20,10 @@ import javax.validation.Valid;
 @SessionAttributes("tacoOrder")
 public class OrderController {
 
-    private OrderDataRepository orderRepository;
+    private OrderRepository orderRepository;
 
     @Autowired
-    public OrderController(OrderDataRepository orderRepository) {
+    public OrderController(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 

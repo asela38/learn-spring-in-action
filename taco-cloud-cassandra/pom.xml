@@ -11,7 +11,7 @@
 	<groupId>com.spring.in.action</groupId>
 	<artifactId>taco-cloud-cassandra</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>taco-cloud</name>
+	<name>taco-cloud-cassandra</name>
 	<description>Taco Cloud Example</description>
 	<properties>
 		<java.version>11</java.version>

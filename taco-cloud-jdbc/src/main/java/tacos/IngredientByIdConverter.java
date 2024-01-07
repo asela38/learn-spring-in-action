@@ -2,15 +2,15 @@ package tacos;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import tacos.data.jdbc.IngredientDataRepository;
+import tacos.jdbc.IngredientRepository;
 import tacos.model.Ingredient;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
 
-    private final IngredientDataRepository ingredientRepository;
+    private final IngredientRepository ingredientRepository;
 
-    public IngredientByIdConverter(IngredientDataRepository ingredientRepository) {
+    public IngredientByIdConverter(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
 

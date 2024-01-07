@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import tacos.*;
-import tacos.data.jdbc.IngredientDataRepository;
+import tacos.jdbc.IngredientRepository;
 import tacos.model.Ingredient;
 import tacos.model.Taco;
 import tacos.model.TacoOrder;
@@ -22,10 +22,10 @@ import java.util.stream.StreamSupport;
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
 
-    private final IngredientDataRepository ingredientRepository;
+    private final IngredientRepository ingredientRepository;
 
     @Autowired
-    public DesignTacoController(IngredientDataRepository ingredientRepository) {
+    public DesignTacoController(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
 
