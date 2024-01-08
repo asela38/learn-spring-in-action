@@ -11,10 +11,10 @@ import tacos.data.jdbc.IngredientDataRepository;
 
 @SpringBootApplication
 @ComponentScan
-public class TacoCloudApplication  implements WebMvcConfigurer {
+public class TacoCloudApplicationJpa implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TacoCloudApplication.class, args);
+		SpringApplication.run(TacoCloudApplicationJpa.class, args);
 	}
 
 	@Override
