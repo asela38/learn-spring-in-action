@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    initialization-mode: never
+    first:
+      url: jdbc:h2:mem:first
+      username: sa
+      password:
+      driverClassName: org.h2.Driver
+    second:
+      url: jdbc:h2:mem:second
+      username: sa
+      password:
+      driverClassName: org.h2.Driver
