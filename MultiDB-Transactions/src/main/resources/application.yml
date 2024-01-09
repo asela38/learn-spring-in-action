@@ -1,6 +1,5 @@
 spring:
   datasource:
-    initialization-mode: never
     first:
       url: jdbc:h2:mem:first
       username: sa

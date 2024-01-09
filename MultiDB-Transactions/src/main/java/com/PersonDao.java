@@ -33,4 +33,8 @@ public class PersonDao {
                         .build(), name);
     }
 
+    public void add(Source source, Person person) {
+        get(source).update("insert into person values (? , sysdate)", person.getName());
+    }
+
 }

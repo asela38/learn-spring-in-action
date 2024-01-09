@@ -55,8 +55,8 @@ public class Config {
     @Bean
     public DataSourceInitializer dataSourceInitializer1(DataSource firstDs) {
         ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
-        resourceDatabasePopulator.addScript(new ClassPathResource("schema.sql"));
-        resourceDatabasePopulator.addScript(new ClassPathResource("data.sql"));
+        resourceDatabasePopulator.addScript(new ClassPathResource("schema-custom.sql"));
+        resourceDatabasePopulator.addScript(new ClassPathResource("data-custom.sql"));
 
         DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
         dataSourceInitializer.setDataSource(firstDs);
@@ -67,8 +67,8 @@ public class Config {
     @Bean
     public DataSourceInitializer dataSourceInitializer2(@Qualifier("secondDs") DataSource secondDs) {
         ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
-        resourceDatabasePopulator.addScript(new ClassPathResource("schema.sql"));
-        resourceDatabasePopulator.addScript(new ClassPathResource("data.sql"));
+        resourceDatabasePopulator.addScript(new ClassPathResource("schema-custom.sql"));
+        resourceDatabasePopulator.addScript(new ClassPathResource("data-custom.sql"));
 
         DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
         dataSourceInitializer.setDataSource(secondDs);
