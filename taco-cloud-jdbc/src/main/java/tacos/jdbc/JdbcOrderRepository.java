@@ -69,6 +69,11 @@ public class JdbcOrderRepository implements OrderRepository {
         return tacoOrder;
     }
 
+    @Override
+    public void deleteAllOrders() {
+
+    }
+
     private long saveTaco(long orderId, int orderKey, Taco taco) {
         PreparedStatementCreatorFactory pscf = new PreparedStatementCreatorFactory(
                 "insert into Taco " +

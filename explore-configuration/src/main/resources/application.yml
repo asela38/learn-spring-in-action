@@ -1,0 +1,33 @@
+server:
+  port: 8443
+  ssl:
+    key-store: ./explore-configuration/src/main/resources/mykeys.jks
+    key-store-password: letmein
+    key-password: letmein
+
+spring:
+  sql:
+    init:
+      mode: embeded
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+    initialization-mode: embedded
+#    schema:
+#    - schema_person.sql
+#    - schema_address.sql
+#    data:
+#    - address_data.sql
+#    - person_data.sql
+
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG
+
+com:
+  main:
+    message: "Hello"
+    version: "1.0"

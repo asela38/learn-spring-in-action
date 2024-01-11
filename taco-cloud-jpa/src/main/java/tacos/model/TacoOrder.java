@@ -41,6 +41,9 @@ public class TacoOrder implements Serializable {
     private String ccCVV;
     private Date placedAt = new Date();
 
+    @ManyToOne
+    private User user;
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
 
