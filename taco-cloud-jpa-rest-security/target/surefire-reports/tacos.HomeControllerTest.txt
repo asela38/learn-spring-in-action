@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: tacos.HomeControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.117 s <<< FAILURE! - in tacos.HomeControllerTest
+testHomePage  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [tacos.TacoCloudApplicationJpaRestSecurity]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class tacos.TacoCloudApplicationJpaRestSecurity
+Caused by: java.lang.IllegalStateException: Failed to introspect annotated methods on class tacos.TacoCloudApplicationJpaRestSecurity
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [tacos.TacoCloudApplicationJpaRestSecurity] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@42110406]
+Caused by: java.lang.NoClassDefFoundError: tacos/data/jdbc/IngredientDataRepository
+Caused by: java.lang.ClassNotFoundException: tacos.data.jdbc.IngredientDataRepository
+

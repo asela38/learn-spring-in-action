@@ -12,10 +12,11 @@ import javax.persistence.Id;
 @Builder
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+//@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class Ingredient {
     @Id
     private final String id;
+    @Setter
     private final String name;
     @Enumerated(EnumType.STRING)
     private final Type type;
