@@ -6,6 +6,9 @@ logging:
     root: TRACE
 
 spring:
+  data:
+    rest:
+      base-path: /data-api
   security:
     oauth2:
       resourceserver:
