@@ -45,7 +45,7 @@ public class AuthenticationServerConfig {
     }
 
     /**
-     * http://localhost:9000/oauth2/authorize?response_type=code&client_id=tacoadmin-client&redirect_url=http://127.0.0.1:9090/login/oauth2/code/taco-admin-client&scope=writeIngredients+deleteIngredients+openid
+     * http://localhost:9000/oauth2/authorize?response_type=code&client_id=tacoadmin-client&redirect_url=http://127.0.0.1:9090/login/oauth2/code/taco-admin-client&scope=writeIngredients+deleteIngredients
      *
      * http://127.0.0.1:9090/login/oauth2/code/taco-admin-client?code=Z7Zozt9kNZijoBchun3JERlFr61APHjeu3_uPfSQh-8kBDPxoel9Ss4Es-HnN46gGPWWYpk0eBnL1lkxzH6oB8l1DTS5DKjq3vyx7MHIQYKAm8GQehK_MchVkxj6Y4O3
      * http://127.0.0.1:9090/login/oauth2/code/taco-admin-client?code=vxZxLk_d8-U6F8sxruEy8qaeQmbbbyErTbtuNGIJoN9HzY8-OyT2YjE80E1YXkzjmFj8FGFpqTLBU_ddXsBwR2D05mAn9XnFY7yEMwbzBt7EODQpLEzAq0Baf-zI0Ui0
@@ -85,7 +85,7 @@ public class AuthenticationServerConfig {
 
     @Bean
     public ProviderSettings providerSettings() {
-        return new ProviderSettings().issuer("http://authserver:9000");
+        return new ProviderSettings().issuer("http://localhost:9000");
     }
 
 

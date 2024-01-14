@@ -4,10 +4,3 @@ server:
 logging:
   level:
     root: TRACE
-
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://authserver:9000

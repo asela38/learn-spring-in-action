@@ -20,10 +20,10 @@ import java.util.stream.Collectors;
 
 @SpringBootApplication
 @ComponentScan
-public class TacoCloudApplicationJpaRestSecurity implements WebMvcConfigurer {
+public class ResourceServer implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TacoCloudApplicationJpaRestSecurity.class, args);
+		SpringApplication.run(ResourceServer.class, args);
 	}
 
 	@Override

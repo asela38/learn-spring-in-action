@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.spring.in.action</groupId>
-    <artifactId>authorization-server</artifactId>
+    <artifactId>resource-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>authorization-servery</name>
-    <description>Authorization Server</description>
+    <name>resource-server</name>
+    <description>Resource Server</description>
     <properties>
         <java.version>11</java.version>
         <h2.version>1.4.196</h2.version>
@@ -48,9 +48,8 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.security.experimental</groupId>
-            <artifactId>spring-security-oauth2-authorization-server</artifactId>
-            <version>0.1.2</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

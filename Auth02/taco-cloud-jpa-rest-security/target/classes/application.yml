@@ -1,8 +1,0 @@
-logging:
-  level:
-    root: INFO
-
-spring:
-  data:
-    rest:
-      base-path: /data-api
