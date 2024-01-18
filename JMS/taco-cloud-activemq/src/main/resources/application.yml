@@ -1,0 +1,12 @@
+logging:
+  level:
+    root: INFO
+
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+  jms:
+    template:
+      default-destination: tacocloud.order.queue
