@@ -5,12 +5,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import tacos.data.jdbc.IngredientDataRepository;
 import tacos.data.jdbc.TacoRepository;
 import tacos.model.Ingredient;
 import tacos.model.Taco;
+import tacos.model.TacoOrder;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,6 +32,14 @@ public class TacoCloudApplicationActiveMq implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("home");
 		registry.addViewController("/login");
+	}
+
+	@Bean
+	public MappingJackson2MessageConverter messageConverter(){
+		MappingJackson2MessageConverter messageConverter = new MappingJackson2MessageConverter();
+		messageConverter.setTypeIdPropertyName("_typeId");
+		messageConverter.setTypeIdMappings(Map.of("order", TacoOrder.class));
+		return messageConverter;
 	}
 
 	@Bean

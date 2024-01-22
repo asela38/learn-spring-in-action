@@ -2,7 +2,6 @@ package tacos.model;
 
 import lombok.*;
 
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;

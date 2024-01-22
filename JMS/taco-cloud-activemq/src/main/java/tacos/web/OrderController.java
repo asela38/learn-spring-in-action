@@ -46,7 +46,7 @@ public class OrderController {
             return "orderForm";
         }
         log.info("order submitted: {}", order);
-        order.setUser(user);
+      //  order.setUser(user);
         orderRepository.save(order);
         jmsOrderMessagingService.sendOrder(order);
         sessionStatus.setComplete();

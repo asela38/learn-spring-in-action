@@ -3,7 +3,6 @@ package tacos.model;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -41,8 +40,8 @@ public class TacoOrder implements Serializable {
     private String ccCVV;
     private Date placedAt = new Date();
 
-    @ManyToOne
-    private User user;
+//    @ManyToOne
+//    private User user;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
