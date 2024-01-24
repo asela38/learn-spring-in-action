@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Profile;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import tacos.model.TacoOrder;
 
@@ -39,6 +40,7 @@ public class JMSActiveMqReceiverMain {
 
 
     @Bean
+    @Profile("!listener")
     public CommandLineRunner runner(JMSOrderMessageReceiver receiver) {
         return  args -> {
             log.info("Pull one : {}", receiver.receiveOrder() );
