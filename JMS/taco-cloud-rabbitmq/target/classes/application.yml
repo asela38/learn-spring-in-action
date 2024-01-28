@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: INFO
+
+spring:
+  rabbitmq:
+    template:
+      exchange: tacocloud.order
+      routing-key: kitchens.central
