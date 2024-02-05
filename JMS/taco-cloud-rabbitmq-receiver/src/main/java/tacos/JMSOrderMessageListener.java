@@ -11,7 +11,7 @@ import tacos.model.TacoOrder;
 @Slf4j
 public class JMSOrderMessageListener {
 
-    @RabbitListener(queues = "tacocloud.order.queue")
+    @RabbitListener(queues = "kitchens.central")
     public void receiveOrder(TacoOrder tacoOrder) {
         log.info("{}", tacoOrder);
     }
